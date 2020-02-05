@@ -15,11 +15,11 @@ using System.Linq;
 using System.Diagnostics;
 using System.Timers;
 
-namespace ConsoleAppCiller
+namespace ConsoleAppKiller
 {
-    class ConsoleAppCiller
+    class ConsoleAppKiller
     {
-        private static string procName; 
+        private static string procName;
         private static int timeDiff;
         private static int timeScan;
 
@@ -27,9 +27,9 @@ namespace ConsoleAppCiller
         {
             procName = args[0];
             timeDiff = int.Parse(args[1]);
-            timeScan = (60000 * int.Parse(args[2]));
+            timeScan = 60000 * int.Parse(args[2]);
 
-            while (Console.ReadKey().Key!=ConsoleKey.Escape)
+            while (Console.ReadKey().Key != ConsoleKey.Escape)
             {
                 //Тут должна быть работа с таймером
                 AllInfoProcess();
